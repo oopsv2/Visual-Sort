@@ -1,0 +1,21 @@
+<div class="outer-container">
+   <nav class="navbar">
+      <div class="wrapper">
+         <div class="first">
+            <button nbButton outline shape="semi-round" class="nav-item" (click)="resetArray()">Generate New
+               Array</button>
+         </div>
+         <div class="second">
+            <button nbButton hero shape="semi-round" class="nav-item" (click)="mergeSort()">Merge Sort</button>
+            <button nbButton hero shape="semi-round" class="nav-item" (click)="quickSort()">Quick Sort</button>
+            <button nbButton hero shape="semi-round" class="nav-item" (click)="bubbleSort()">Bubble Sort</button>
+            <button nbButton hero shape="semi-round" class="nav-item" (click)="heapSort()">Heap Sort</button>
+         </div>
+      </div>
+
+   </nav>
+   <div class="array-block">
+      <div class="array-item" *ngFor="let ele of array" [ngStyle]="{'height': ele+'px', 'background-color': color}">
+      </div>
+   </div>
+</div>

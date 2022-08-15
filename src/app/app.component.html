@@ -1,0 +1,22 @@
+<nb-layout>
+
+    <nb-layout-header fixed>
+        <div class="wrapper">
+            <h1>Sort Visualizer</h1>
+        </div>
+    </nb-layout-header>
+
+    <nb-layout-column>
+        <app-sorting-visualizer></app-sorting-visualizer>
+    </nb-layout-column>
+
+    <nb-layout-footer fixed>
+        <nb-progress-bar class="progress-bar" *ngIf="percentComplete < 100" [value]="percentComplete" status="primary">
+            <h5>Sorting {{percentComplete}}% </h5>
+        </nb-progress-bar>
+        <nb-progress-bar class="progress-bar" *ngIf="percentComplete >= 100" status="primary" [value]="100">
+            <h5>Sorting Complete</h5>
+        </nb-progress-bar>
+    </nb-layout-footer>
+
+</nb-layout>
